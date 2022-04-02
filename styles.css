@@ -1,0 +1,43 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--#{$variable-prefix}body-bg); // 2
+}
+
+.container {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background-color: var(--#{$variable-prefix}body-bg);
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 512px;
+    height: 512px;
+    margin: auto;
+    outline: 1px solid #999999;
+    display: flex;
+   
+    
+}
+    
+.box {
+    outline: 1px solid #999999;
+    background-color: #b9b9b9;
+    margin: 0;
+    padding: 1px 1px 1px 1px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.hover {
+    outline: 1px solid #999999;
+    background-color: #ffffff;
+}
