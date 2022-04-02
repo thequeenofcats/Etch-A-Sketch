@@ -19,15 +19,15 @@ body {
     width: 512px;
     height: 512px;
     margin: auto;
-    outline: 1px solid #999999;
+    outline: 1px solid #dadada;
     display: flex;
    
     
 }
     
 .box {
-    outline: 1px solid #999999;
-    background-color: #b9b9b9;
+    outline: 1px solid #dadada;
+    background-color: #ececec;
     margin: 0;
     padding: 1px 1px 1px 1px;
 }
@@ -38,6 +38,13 @@ body {
 }
 
 .hover {
-    outline: 1px solid #999999;
+    outline: 1px solid #dadada;
     background-color: #ffffff;
+}
+
+#color {
+    width: 125px;
+    height: 30px;
+    background-color: #dddddd;
+    padding: 3px 3px 3px 3px;
 }

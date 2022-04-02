@@ -6,19 +6,20 @@ const resetButton = document.querySelector('.reset');
 let newColor = document.getElementById('color').value;
 let currentColor;
 
+// Creates a div in the grid
 function createDiv(size) {   
  const div = document.createElement('div');
  div.classList.add('box');
  div.style.width = `${size}px`;
  div.style.height = `${size}px`;
- grid.appendChild(div);
  return div
 }
 
+// Creates a grid
 function createGrid(gridSize) {
-  for (let i = 0; i < gridSize; i++) { 
-    for (let j = 0; j < gridSize; j++) {
-      grid.appendChild(createDiv(grid.clientWidth / gridSize));
+  for (let i = 0; i < gridSize; i++) { // Creates the divs in the first row
+    for (let j = 0; j < gridSize; j++) { // Creates the rest of the rows
+      grid.appendChild(createDiv(grid.clientWidth / gridSize)); // Calculates size of div for grid
     }
   }
 }
@@ -27,7 +28,7 @@ function squareAmount() {
 
   if (squaresInput.value === '1') {
     while (grid.firstChild) {
-      grid.removeChild(grid.lastChild)
+      grid.removeChild(grid.lastChild) // if grid exists, function removes it and then makes a new one
     }
     createGrid(4)
   } else if (squaresInput.value === '2') {
@@ -55,7 +56,6 @@ function changeColor() {
 
 function setCurrentColor(newColor) {
   currentColor = newColor;
-  console.log(currentColor);
 }
 
 function reset() {
@@ -77,5 +77,4 @@ squaresInput.addEventListener("input", squareAmount);
 resetButton.addEventListener("click", reset);
 const chooseColor = document.querySelector('#color');
 chooseColor.addEventListener('input', changeColor);
-
 squareAmount();
